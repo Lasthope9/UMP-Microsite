@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   
   AOS.init({ duration: 1000 });
@@ -27,8 +26,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // ----- HERO SLIDER -----
   const slides = document.querySelectorAll('.hero-slider .slide');
   let current = 0;
+
+  // Lazy-load slides
+  slides.forEach((slide, index) => {
+    const webp = slide.dataset.bgWebp;
+    const jpg = slide.dataset.bgJpg;
+    const img = new Image();
+
+    img.onload = () => {
+      slide.style.backgroundImage = `url('${img.src}')`;
+    };
+    img.onerror = () => {
+      slide.style.backgroundImage = `url('${jpg}')`;
+    };
+
+    if (index === 0) {
+      img.src = webp; // load first slide immediately
+    } else {
+      setTimeout(() => { img.src = webp; }, 1000 * index); // lazy-load remaining slides
+    }
+  });
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
@@ -44,7 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (slides.length > 0) {
     showSlide(current);
-    setInterval(nextSlide, 5000);
+    setInterval(nextSlide, 5000); // change slide every 5s
   }
 
 });
+

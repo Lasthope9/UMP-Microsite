@@ -55,10 +55,11 @@
    <section class="hero-intro">
   <!-- Slider container -->
   <div class="hero-slider">
-    <div class="slide active" style="background-image: url('images/Slideshow/Hero Nature Blend.jpg');"></div>
-    <div class="slide" style="background-image: url('images/Slideshow/UMP Her New Entrance 2.png');"></div>
-    <div class="slide" style="background-image: url('images/Slideshow/UMP Hero image.jpg');"></div>
+     <div class="slide active" data-bg-jpg="images/Slideshow/Hero Nature Blend.jpg" data-bg-webp="images/Slideshow/Hero Nature Blend.webp"></div>
+     <div class="slide" data-bg-jpg="images/Slideshow/UMP Her New Entrance 2.png" data-bg-webp="images/Slideshow/UMP Her New Entrance 2.webp"></div>
+     <div class="slide" data-bg-jpg="images/Slideshow/UMP Hero image.jpg" data-bg-webp="images/Slideshow/UMP Hero image.webp"></div>
   </div>
+
 
   <!-- Overlay for text readability -->
   <div class="hero-overlay"></div>
@@ -161,25 +162,52 @@
       <!-- Objectives -->
       <p class="text-center " data-aos="fade-up">Conference Theme and Objectives</p>
       <div class="row mb-5">
-        <div class="col-md-4">
-          <div class="program-card" data-aos="fade-up" style="background-color: var(--primary); color: white;">
-            <img src="images/Themes/smart-robotic-farmers-concept-robot-farmers-agriculture-technology-farm-automation.jpg" alt="Robot Image">
-            <p>Provide a platform for sharing and discussing South African research, technology, and innovation trends in the global change realm, addressing environmental challenges of our time.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="program-card" data-aos="fade-up" style="background-color: var(--secondary); color: white;">
-            <img src="images/Themes/business-partners-closing-deal.jpg" alt="Handshake Image">
-            <p>Facilitate networking among global change stakeholders and communities to create and strengthen partnerships that will enhance research and catalyze innovation.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="program-card" data-aos="fade-up">
-            <img src="images/Themes/Research .png" alt="Black lady writing">
-            <p>Empower and mentor the next generation of young researchers and innovators addressing societal challenges.</p>
-          </div>
-        </div>
-      </div>
+  <div class="col-md-4">
+    <div class="program-card" data-aos="fade-up" style="background-color: var(--primary); color: white;">
+      <picture>
+        <source srcset="images/Themes/smart-robotic-farmers-concept-robot-farmers-agriculture-technology-farm-automation.webp" type="image/webp">
+        <img 
+          src="images/Themes/smart-robotic-farmers-concept-robot-farmers-agriculture-technology-farm-automation.jpg" 
+          alt="Robot Image" 
+          loading="lazy" 
+          width="100%" 
+          height="auto">
+      </picture>
+      <p>Provide a platform for sharing and discussing South African research, technology, and innovation trends in the global change realm, addressing environmental challenges of our time.</p>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="program-card" data-aos="fade-up" style="background-color: var(--secondary); color: white;">
+      <picture>
+        <source srcset="images/Themes/business-partners-closing-deal.webp" type="image/webp">
+        <img 
+          src="images/Themes/business-partners-closing-deal.jpg" 
+          alt="Handshake Image" 
+          loading="lazy" 
+          width="100%" 
+          height="auto">
+      </picture>
+      <p>Facilitate networking among global change stakeholders and communities to create and strengthen partnerships that will enhance research and catalyze innovation.</p>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="program-card" data-aos="fade-up">
+      <picture>
+        <source srcset="images/Themes/Research.webp" type="image/webp">
+        <img 
+          src="images/Themes/Research.png" 
+          alt="Black lady writing" 
+          loading="lazy" 
+          width="100%" 
+          height="auto">
+      </picture>
+      <p>Empower and mentor the next generation of young researchers and innovators addressing societal challenges.</p>
+    </div>
+  </div>
+</div>
+
 
       <!-- Program Schedule -->
       <h3 class="text-align: left mb-4" data-aos="fade-up">Programme</h3>
@@ -191,85 +219,116 @@
       <p><strong>DAY 1: MONDAY, 01 DECEMBER 2025.</strong></p>
       <p>Pivoting/Positioning STI for socio-economic development (entrepreneurship, transformation and empowerment)</p>
     </div>
-      <div class="icon-box" style="border-radius: 100%; padding: 12px;">
-        <img src="images/icons/Economy Day 1.png" alt="Technology Infrastructure" style="width: 36px; height: 36px;">
-      </div>
-     </div>
-
-    <div class="program-card d-flex justify-content-between align-items-center" data-aos="fade-up">
-       <div>
-         <p><strong>DAY 2: TUESDAY, 02 DECEMBER 2025.</strong></p>
-         <p>Building resilient communities in the face of increasing natural disasters</p>
-       </div>
-      <div class="icon-box" style="border-radius: 100%; padding: 12px;">
-        <img src="images/icons/Natural Day 2.png" alt="Technology Infrastructure" style="width: 36px; height: 36px;">
-      </div>
-     </div>
-
       <div class="program-card d-flex justify-content-between align-items-center" data-aos="fade-up">
-       <div>
-         <p><strong>DAY 3: WEDNESDAY, 03 DECEMBER 2025.</strong></p>
-         <p>Technology and infrastructures as enablers for research</p>
-        </div>
-        <div class="icon-box" style="border-radius: 100%; padding: 12px;">
-          <img src="images/icons/Tech Inf Day 3.png" alt="Technology Infrastructure" style="width: 36px; height: 36px;">
-        </div>
-     </div>
-
-    <div class="program-card d-flex justify-content-between align-items-center" data-aos="fade-up">
-      <div>
-        <p><strong>DAY 4: THURSDAY, 04 DECEMBER 2025.</strong></p>
-        <p>Earth-Ocean Link from the Indian Ocean to the Karoo ecosystem</p>
-      </div>
-     <div class="icon-box" style="border-radius: 100%; padding: 12px;">
-       <img src="images/icons/Africa Day 4.png" alt="Technology Infrastructure" style="width: 36px; height: 36px;">
-     </div>
-    </div>
-
-  <div style="display: inline-block; background-color: var(--tertiary); border-radius: 50px; padding: 5px; margin-bottom: 1.5rem;">
-    <a href="documents/Final_Program_Global_Change_2025.pdf" target="_blank" style="text-decoration: none;">
-      <button style="background: transparent; border: none; padding: 10px 25px; border-radius: 50px; color: white; font-weight: bold; cursor: pointer; font-size: 1rem;">
-         View Full Programme
-       </button>
-    </a>
+  <div>
+    <p><strong>DAY 1: MONDAY, 01 DECEMBER 2025.</strong></p>
+    <p>Economic developments and policies impacting research and innovation</p>
   </div>
+  <div class="icon-box" style="border-radius: 100%; padding: 12px;">
+    <picture>
+      <source srcset="images/icons/Economy Day 1.webp" type="image/webp">
+      <img src="images/icons/Economy Day 1.png" alt="Economy Icon" width="36" height="36" loading="lazy">
+    </picture>
+  </div>
+</div>
+
+<div class="program-card d-flex justify-content-between align-items-center" data-aos="fade-up">
+  <div>
+    <p><strong>DAY 2: TUESDAY, 02 DECEMBER 2025.</strong></p>
+    <p>Building resilient communities in the face of increasing natural disasters</p>
+  </div>
+  <div class="icon-box" style="border-radius: 100%; padding: 12px;">
+    <picture>
+      <source srcset="images/icons/Natural Day 2.webp" type="image/webp">
+      <img src="images/icons/Natural Day 2.png" alt="Natural Disaster Icon" width="36" height="36" loading="lazy">
+    </picture>
+  </div>
+</div>
+
+<div class="program-card d-flex justify-content-between align-items-center" data-aos="fade-up">
+  <div>
+    <p><strong>DAY 3: WEDNESDAY, 03 DECEMBER 2025.</strong></p>
+    <p>Technology and infrastructures as enablers for research</p>
+  </div>
+  <div class="icon-box" style="border-radius: 100%; padding: 12px;">
+    <picture>
+      <source srcset="images/icons/Tech Inf Day 3.webp" type="image/webp">
+      <img src="images/icons/Tech Inf Day 3.png" alt="Tech Infrastructure Icon" width="36" height="36" loading="lazy">
+    </picture>
+  </div>
+</div>
+
+<div class="program-card d-flex justify-content-between align-items-center" data-aos="fade-up">
+  <div>
+    <p><strong>DAY 4: THURSDAY, 04 DECEMBER 2025.</strong></p>
+    <p>Earth-Ocean Link from the Indian Ocean to the Karoo ecosystem</p>
+  </div>
+  <div class="icon-box" style="border-radius: 100%; padding: 12px;">
+    <picture>
+      <source srcset="images/icons/Africa Day 4.webp" type="image/webp">
+      <img src="images/icons/Africa Day 4.png" alt="Africa Icon" width="36" height="36" loading="lazy">
+    </picture>
+  </div>
+</div>
+
+<div style="display: inline-block; background-color: var(--tertiary); border-radius: 50px; padding: 5px; margin-bottom: 1.5rem;">
+  <a href="documents/Final_Program_Global_Change_2025.pdf" target="_blank" style="text-decoration: none;">
+    <button style="background: transparent; border: none; padding: 10px 25px; border-radius: 50px; color: white; font-weight: bold; cursor: pointer; font-size: 1rem;">
+      View Full Programme
+    </button>
+  </a>
+</div>
+
 
   <!-- Guest Speakers -->
     <h3 class="text-align: left mb-4" data-aos="fade-up">Guest Speakers</h3>
     <div class="speakers-grid" data-aos="fade-up">
 
        <!-- Speaker 1 -->
-      <div class="speaker-card">
-        <img src="images/Speakers/Obura.png" alt="Speaker 1">
-       <p>
-         Director of CORDIO.
-         His work has been focused on the ecology and dynamics of natural systems under the combined influence of climate change and impacts of human interactions with the environment
-       </p>
-      </div>
+     <!-- Speaker 1 -->
+<div class="speaker-card">
+  <picture>
+    <source srcset="images/Speakers/Obura.webp" type="image/webp">
+    <img src="images/Speakers/Obura.png" alt="Director of CORDIO" loading="lazy" width="100%" height="auto">
+  </picture>
+  <p>
+    Director of CORDIO. His work has been focused on the ecology and dynamics of natural systems under the combined influence of climate change and impacts of human interactions with the environment.
+  </p>
+</div>
 
-      <!-- Speaker 2 -->
-     <div class="speaker-card">
-        <img src="images/Speakers/Otomo.png" alt="Speaker 2">
-        <p>
-         Associate professor in the Department of Zoology and Entomology at the University of the Free State (UFS) in South Africa.
-        </p>
-     </div>
+<!-- Speaker 2 -->
+<div class="speaker-card">
+  <picture>
+    <source srcset="images/Speakers/Otomo.webp" type="image/webp">
+    <img src="images/Speakers/Otomo.png" alt="Associate Professor at UFS" loading="lazy" width="100%" height="auto">
+  </picture>
+  <p>
+    Associate professor in the Department of Zoology and Entomology at the University of the Free State (UFS) in South Africa.
+  </p>
+</div>
 
-     <!-- Speaker 3 -->
-     <div class="speaker-card">
-        <img src="images/Speakers/Pereira.png" alt="Speaker 3">
-       <p>
-         Sustainability Transformations and Futures at the Global Change Institute at Wits University and a researcher at the Stockholm Resilience Centre, Stockholm University.
-       </p>
-      </div>
+<!-- Speaker 3 -->
+<div class="speaker-card">
+  <picture>
+    <source srcset="images/Speakers/Pereira.webp" type="image/webp">
+    <img src="images/Speakers/Pereira.png" alt="Sustainability Researcher" loading="lazy" width="100%" height="auto">
+  </picture>
+  <p>
+    Sustainability Transformations and Futures at the Global Change Institute at Wits University and a researcher at the Stockholm Resilience Centre, Stockholm University.
+  </p>
+</div>
 
-       <!-- Speaker 4 -->
-      <div class="speaker-card">
-        <img src="images/Speakers/Ziervogel.png" alt="Speaker 4">
-         <p>
-          Department of Environmental and Geographical Science and Director of the African Climate and Development Initiative (ACDI), at the University of Cape Town.
-        </p>
-      </div>
+<!-- Speaker 4 -->
+<div class="speaker-card">
+  <picture>
+    <source srcset="images/Speakers/Ziervogel.webp" type="image/webp">
+    <img src="images/Speakers/Ziervogel.png" alt="Director at ACDI, UCT" loading="lazy" width="100%" height="auto">
+  </picture>
+  <p>
+    Department of Environmental and Geographical Science and Director of the African Climate and Development Initiative (ACDI), at the University of Cape Town.
+  </p>
+</div>
+
 
    </div>
 
@@ -431,97 +490,143 @@
 
   <!-- Accommodation Section -->
   <section id="accommodation">
-    <div class="container">
-      <h2 class="text-center mb-5" data-aos="fade-up">Conference Accommodation</h2>
-      <div class="row g-4">
-        <div class="col-md-4" data-aos="fade-up">
-          <a href="https://tfokomala.co.za/ " target="_blank" style="text-decoration: none; color: inherit;">
-           <div class="hotel-card">
-             <img src="images/Accommodation/Tfokomala.jpg" alt="Hotel 1">
-             <h5>Tfokomala Hotel and Conference Centre (UMP Boutique Hotel)  </h5>
-             <p>Tel/WhatsApp: 063 795 8833</p>
-           </div>
-          </a>
-        </div>
-        <div class="col-md-4" data-aos="fade-up">
-          <a href="https://www.southernsun.com/southern-sun-mbombela " target="_blank" style="text-decoration: none; color: inherit;">
-           <div class="hotel-card">
-             <img src="images/Accommodation/Southren Sun.png" alt="Hotel 2">
-             <h5>Southern Sun Mbombela  </h5>
-           </div>
-          </a>
-        </div>
-        <div class="col-md-4" data-aos="fade-up">
-          <a href="https://www.chillpepperhotel.co.za/ " target="_blank" style="text-decoration: none; color: inherit;">
-           <div class="hotel-card">
-             <img src="images/Accommodation/Cillie Pepper Hotel.jpeg" alt="Hotel 4">
-             <h5>Chill Pepper Hotel </h5>
-           </div>
-          </a>
-        </div>
-        <div class="col-md-4" data-aos="fade-up">
-          <a href="https://thecapital.co.za/mbombela/ " target="_blank" style="text-decoration: none; color: inherit;">
-           <div class="hotel-card">
-             <img src="images/Accommodation/The Capital.jpg" alt="Hotel 4">
-             <h5>The Capital Mbombela </h5>
-           </div>
-          </a>
-        </div>
-        <div class="col-md-4" data-aos="fade-up">
-          <a href="​https://www.mercurehotels.co.za/rooms/nelspruit/ " target="_blank" style="text-decoration: none; color: inherit;">
-           <div class="hotel-card">
-             <img src="images/Accommodation/Mecure Hotel.jpg" alt="Hotel 7">
-             <h5>Mercure Nelspruit Hotel </h5>
-           </div>
-          </a>
-        </div>
-        <div class="col-md-4" data-aos="fade-up">
-          <a href="​https://www.southernsun.com/sun1-nelspruit " target="_blank" style="text-decoration: none; color: inherit;">
-           <div class="hotel-card">
-             <img src="images/Accommodation/Sun1.png" alt="Hotel 7">
-             <h5>SUN1 Nelspruit</h5>
-           </div>
-          </a>
-        </div>
-        <div class="col-md-4" data-aos="fade-up">
-          <a href="https://www.southernsun.com/stayeasy-mbombela" target="_blank" style="text-decoration: none; color: inherit;">
-           <div class="hotel-card">
-             <img src="images/Accommodation/Stayeasy.png" alt="Hotel 7">
-             <h5>StayEasy Mbombela</h5>
-           </div>
-         </a>
-        </div>
-        <div class="col-md-4" data-aos="fade-up">
-          <a href="https://www.marriott.com/en-us/hotels/mqpnl-protea-hotel-nelspruit/overview/" target="_blank" style="text-decoration: none; color: inherit;">
-           <div class="hotel-card">
-             <img src="images/Accommodation/Protea Hotel.jpg" alt="Hotel 9">
-             <h5>Protea Hotel Nelspruit</h5>
-           </div>
-         </a>
-        </div>
-        <div class="col-md-4" data-aos="fade-up">
-          <a href="https://citylodgehotels.com/our-hotels/Town%20Lodge/92" target="_blank" style="text-decoration: none; color: inherit;">
-           <div class="hotel-card">
-             <img src="images/Accommodation/Town Lodge.png" alt="Hotel 9">
-             <h5>Town Lodge Mbombela</h5>
-           </div>
-         </a>
-        </div>
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">Conference Accommodation</h2>
+    <div class="row g-4">
 
-
-      <div class="col-12 mt-5" data-aos="fade-up">
-        <div class="accommodation-contact" 
-           style="background-color: #fff; color: #000; text-align: start; padding: 20px; border-radius: 8px;">
-              <h4 style="margin-bottom: 15px;">For Accommodation and Travel enquiries, please contact:</h4>
-              <p style="margin: 5px 0; color: black; font-weight: bold;">Angela Beukes</p>
-              <p style="margin: 5px 0;">Email: <a href="mailto:angelaf@millenniumtravel.co.za" style="color: #000; text-decoration: underline;">angelaf@millenniumtravel.co.za</a></p>
-              <p style="margin: 5px 0;">Tel: 021 590 7900</p>
-              <p style="margin: 5px 0;">Cell: 083 693 4934</p>
-        </div>
-     </div>
+      <!-- Hotel 1 -->
+      <div class="col-md-4" data-aos="fade-up">
+        <a href="https://tfokomala.co.za/" target="_blank" style="text-decoration: none; color: inherit;">
+          <div class="hotel-card">
+            <picture>
+              <source srcset="images/Accommodation/Tfokomala.webp" type="image/webp">
+              <img src="images/Accommodation/Tfokomala.jpg" alt="Tfokomala Hotel and Conference Centre" loading="lazy" width="100%" height="auto">
+            </picture>
+            <h5>Tfokomala Hotel and Conference Centre (UMP Boutique Hotel)</h5>
+            <p>Tel/WhatsApp: 063 795 8833</p>
+          </div>
+        </a>
       </div>
+
+      <!-- Hotel 2 -->
+      <div class="col-md-4" data-aos="fade-up">
+        <a href="https://www.southernsun.com/southern-sun-mbombela" target="_blank" style="text-decoration: none; color: inherit;">
+          <div class="hotel-card">
+            <picture>
+              <source srcset="images/Accommodation/Southren Sun.webp" type="image/webp">
+              <img src="images/Accommodation/Southren Sun.png" alt="Southern Sun Mbombela" loading="lazy" width="100%" height="auto">
+            </picture>
+            <h5>Southern Sun Mbombela</h5>
+          </div>
+        </a>
+      </div>
+
+      <!-- Hotel 3 -->
+      <div class="col-md-4" data-aos="fade-up">
+        <a href="https://www.chillpepperhotel.co.za/" target="_blank" style="text-decoration: none; color: inherit;">
+          <div class="hotel-card">
+            <picture>
+              <source srcset="images/Accommodation/Cillie Pepper Hotel.webp" type="image/webp">
+              <img src="images/Accommodation/Cillie Pepper Hotel.jpeg" alt="Chill Pepper Hotel" loading="lazy" width="100%" height="auto">
+            </picture>
+            <h5>Chill Pepper Hotel</h5>
+          </div>
+        </a>
+      </div>
+
+      <!-- Hotel 4 -->
+      <div class="col-md-4" data-aos="fade-up">
+        <a href="https://thecapital.co.za/mbombela/" target="_blank" style="text-decoration: none; color: inherit;">
+          <div class="hotel-card">
+            <picture>
+              <source srcset="images/Accommodation/The Capital.webp" type="image/webp">
+              <img src="images/Accommodation/The Capital.jpg" alt="The Capital Mbombela" loading="lazy" width="100%" height="auto">
+            </picture>
+            <h5>The Capital Mbombela</h5>
+          </div>
+        </a>
+      </div>
+
+      <!-- Hotel 5 -->
+      <div class="col-md-4" data-aos="fade-up">
+        <a href="https://www.mercurehotels.co.za/rooms/nelspruit/" target="_blank" style="text-decoration: none; color: inherit;">
+          <div class="hotel-card">
+            <picture>
+              <source srcset="images/Accommodation/Mecure Hotel.webp" type="image/webp">
+              <img src="images/Accommodation/Mecure Hotel.jpg" alt="Mercure Nelspruit Hotel" loading="lazy" width="100%" height="auto">
+            </picture>
+            <h5>Mercure Nelspruit Hotel</h5>
+          </div>
+        </a>
+      </div>
+
+      <!-- Hotel 6 -->
+      <div class="col-md-4" data-aos="fade-up">
+        <a href="https://www.southernsun.com/sun1-nelspruit" target="_blank" style="text-decoration: none; color: inherit;">
+          <div class="hotel-card">
+            <picture>
+              <source srcset="images/Accommodation/Sun1.webp" type="image/webp">
+              <img src="images/Accommodation/Sun1.png" alt="SUN1 Nelspruit" loading="lazy" width="100%" height="auto">
+            </picture>
+            <h5>SUN1 Nelspruit</h5>
+          </div>
+        </a>
+      </div>
+
+      <!-- Hotel 7 -->
+      <div class="col-md-4" data-aos="fade-up">
+        <a href="https://www.southernsun.com/stayeasy-mbombela" target="_blank" style="text-decoration: none; color: inherit;">
+          <div class="hotel-card">
+            <picture>
+              <source srcset="images/Accommodation/Stayeasy.webp" type="image/webp">
+              <img src="images/Accommodation/Stayeasy.png" alt="StayEasy Mbombela" loading="lazy" width="100%" height="auto">
+            </picture>
+            <h5>StayEasy Mbombela</h5>
+          </div>
+        </a>
+      </div>
+
+      <!-- Hotel 8 -->
+      <div class="col-md-4" data-aos="fade-up">
+        <a href="https://www.marriott.com/en-us/hotels/mqpnl-protea-hotel-nelspruit/overview/" target="_blank" style="text-decoration: none; color: inherit;">
+          <div class="hotel-card">
+            <picture>
+              <source srcset="images/Accommodation/Protea Hotel.webp" type="image/webp">
+              <img src="images/Accommodation/Protea Hotel.jpg" alt="Protea Hotel Nelspruit" loading="lazy" width="100%" height="auto">
+            </picture>
+            <h5>Protea Hotel Nelspruit</h5>
+          </div>
+        </a>
+      </div>
+
+      <!-- Hotel 9 -->
+      <div class="col-md-4" data-aos="fade-up">
+        <a href="https://citylodgehotels.com/our-hotels/Town%20Lodge/92" target="_blank" style="text-decoration: none; color: inherit;">
+          <div class="hotel-card">
+            <picture>
+              <source srcset="images/Accommodation/Town Lodge.webp" type="image/webp">
+              <img src="images/Accommodation/Town Lodge.png" alt="Town Lodge Mbombela" loading="lazy" width="100%" height="auto">
+            </picture>
+            <h5>Town Lodge Mbombela</h5>
+          </div>
+        </a>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-12 mt-5" data-aos="fade-up">
+        <div class="accommodation-contact" style="background-color: #fff; color: #000; text-align: start; padding: 20px; border-radius: 8px;">
+          <h4 style="margin-bottom: 15px;">For Accommodation and Travel enquiries, please contact:</h4>
+          <p style="margin: 5px 0; color: black; font-weight: bold;">Angela Beukes</p>
+          <p style="margin: 5px 0;">Email: <a href="mailto:angelaf@millenniumtravel.co.za" style="color: #000; text-decoration: underline;">angelaf@millenniumtravel.co.za</a></p>
+          <p style="margin: 5px 0;">Tel: 021 590 7900</p>
+          <p style="margin: 5px 0;">Cell: 083 693 4934</p>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Footer -->
    <footer style="background-color: var(--primary); color: white; padding: 50px 0;">
