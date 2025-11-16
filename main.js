@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  
+
+  // Initialize AOS
   AOS.init({ duration: 1000 });
 
+  // --- Scroll to Register Section ---
   const registerBtn = document.getElementById('navbarRegisterBtn');
   const registerSection = document.getElementById('register-container');
 
@@ -11,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // --- Welcome Section Toggle ---
   const btn = document.getElementById("welcomeToggleBtn");
   const hidden = document.getElementById("welcomeHidden");
 
@@ -26,29 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ----- HERO SLIDER -----
+  // --- Hero Slider ---
   const slides = document.querySelectorAll('.hero-slider .slide');
   let current = 0;
-
-  // Lazy-load slides
-  slides.forEach((slide, index) => {
-    const webp = slide.dataset.bgWebp;
-    const jpg = slide.dataset.bgJpg;
-    const img = new Image();
-
-    img.onload = () => {
-      slide.style.backgroundImage = `url('${img.src}')`;
-    };
-    img.onerror = () => {
-      slide.style.backgroundImage = `url('${jpg}')`;
-    };
-
-    if (index === 0) {
-      img.src = webp; // load first slide immediately
-    } else {
-      setTimeout(() => { img.src = webp; }, 1000 * index); // lazy-load remaining slides
-    }
-  });
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
@@ -64,8 +47,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (slides.length > 0) {
     showSlide(current);
-    setInterval(nextSlide, 5000); // change slide every 5s
+    setInterval(nextSlide, 5000);
+
+    // Lazy-load background images for slider
+    slides.forEach((slide, i) => {
+      const bg = slide.style.backgroundImage.slice(5, -2); // get url from style
+      if (i !== 0) { // first slide already visible
+        slide.style.backgroundImage = ''; // clear initially
+        const img = new Image();
+        img.src = bg;
+        img.onload = () => {
+          slide.style.backgroundImage = `url('${bg}')`;
+        };
+      }
+    });
   }
 
-});
+  // --- Automatic Lazy-load for <img> ---
+  const images = document.querySelectorAll("img");
+  images.forEach(img => {
+    if (!img.hasAttribute("loading")) {
+      img.setAttribute("loading", "lazy");
+    }
+  });
 
+  // --- Lazy-load sections with data-bg attribute ---
+  const lazySections = document.querySelectorAll('[data-bg]');
+  lazySections.forEach(el => {
+    const src = el.getAttribute('data-bg');
+    el.style.backgroundImage = ''; // remove inline style initially
+    const img = new Image();
+    img.src = src;
+    img.onload = () => {
+      el.style.backgroundImage = `url('${src}')`;
+    };
+  });
+
+});

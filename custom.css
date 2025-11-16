@@ -108,29 +108,23 @@
 /* Slider */
 .hero-slider {
   position: absolute;
-  top: 0; 
-  left: 0;
-  width: 100%; 
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   z-index: 0;
-  overflow: hidden; /* ensure slides don’t overflow */
 }
 
 .hero-slider .slide {
   position: absolute;
-  top: 0; 
-  left: 0; /* all slides start at same position */
-  width: 100%; 
-  height: 100%;
+  top: 0; left: 100%;
+  width: 100%; height: 100%;
   background-size: cover;
   background-position: center;
+  transition: left 1s ease-in-out, opacity 1s ease-in-out;
   opacity: 0;
-  transition: opacity 1s ease-in-out; /* smoother fade */
-  z-index: 0;
 }
 
-/* Active slide */
 .hero-slider .slide.active {
+  left: 0;
   opacity: 1;
   z-index: 1;
 }
@@ -138,10 +132,8 @@
 /* Overlay */
 .hero-overlay {
   position: absolute;
-  top: 0; 
-  left: 0;
-  width: 100%; 
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
@@ -151,8 +143,6 @@
   position: relative;
   z-index: 2;
 }
-
-
 
 /* Headings & Text */
 .hero-intro h1 {
