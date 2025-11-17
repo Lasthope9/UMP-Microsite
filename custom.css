@@ -161,7 +161,10 @@
   line-height: 1.8;
   text-align: left;
   text-shadow: 1px 1px 3px black;
+  opacity: 0;
+  color: transparent;
 }
+
 
 /* Logos & Button */
 .logo-group img {
